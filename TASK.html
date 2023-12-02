@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHMED SAAD  Check Number</title>
+
+    <script>
+        function X() {
+            
+            var inputValue = document.getElementById("numberInput").value;
+
+           
+            if (isNaN(inputValue) || inputValue === "") {
+                document.getElementById("result").innerText = "Not a Number !! Enter a number ";
+            } else {
+               
+                var number = parseFloat(inputValue);
+
+                
+                if (number > 10) {
+                    document.getElementById("result").innerText = "larger than 10";
+                }else if (number <10 ) {
+                    document.getElementById("result").innerText = "Smaller than 10";
+                } 
+                else if(number =10 ){
+                    document.getElementById("result").innerText = "Equal  10.";
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <body style="background-color: #ffcc00;">
+    <h2>checkNumber</h2>
+    <label for="numberInput">Enter Number:</label>
+    <input type="text" id="numberInput">
+    <button onclick="X()">Check</button>
+    <p id="result"></p>
+</body>
+</html>
